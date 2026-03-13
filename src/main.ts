@@ -209,8 +209,8 @@ class NotesList {
     });
   }
 
-  @ValidateNotEmpty()
   @SanitizeInput()
+  @ValidateNotEmpty()
   addNote(note: Omit<Note, 'createdAt' | 'updatedAt'>) {
     let newNote: BaseNote;
 
@@ -257,9 +257,9 @@ class NotesList {
     return this.notes.find((note) => note.noteId === id);
   }
 
+  @AutoUpdateTimestamp()
   @ValidateNotEmpty()
   @SanitizeInput()
-  @AutoUpdateTimestamp()
   editNote(id: string, data: Partial<Note>) {
     const note = this.getNote(id);
 
