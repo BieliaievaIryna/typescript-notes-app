@@ -1,0 +1,14 @@
+{
+  "type": "module",
+  "scripts": {
+    "build": "tsc && node dist/main.js",
+    "watch": "tsc --watch"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.10",
+    "typescript": "5.0"
+  },
+  "dependencies": {
+    "reflect-metadata": "^0.2.2"
+  }
+}
